@@ -1,0 +1,32 @@
+# Node and Playwright
+node_modules/
+playwright-report/
+test-results/
+.env
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+package-lock.json
+
+# OneDrive temporary
+~$*
+
+# JetBrains
+.idea/
+
+# Coverage
+coverage/
+
+# Reports
+reports/
+
+# Misc
+.env.local
+
