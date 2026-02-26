@@ -3,7 +3,8 @@ console.log("Hello");
 /** 
  *  This is multi line
  *  Author : Sneha Kudtarkar
- *  Date : 14-Feb-2026
+let a3 = null;
+console.log(a3); *  Date : 14-Feb-2026
  **/
 
 /* 
@@ -11,3 +12,6 @@ console.log("Hello");
  *  Author : Sneha Kudtarkar
  *  Date : 14-Feb-2026
  */
+
+
+
