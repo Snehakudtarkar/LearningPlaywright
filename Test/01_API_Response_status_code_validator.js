@@ -11,7 +11,7 @@ As an SDET, you receive an API response status code and need to classify it. Wri
 - 500 → "FAIL - Internal Server Error: Backend issue"
 - Any other → "UNKNOWN - Unhandled status code"*/
 
-let responseCode = 600;
+let responseCode = 200;
 switch (responseCode){
     case 200:
     console.log("PASS - OK: Request successful");
