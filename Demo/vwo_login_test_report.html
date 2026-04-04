@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VWO Login Feature - Test Execution Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .summary-cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 30%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .card.pass {
+            background-color: #d4edda;
+            color: #155724;
+            border-left: 5px solid #28a745;
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f1f2f6;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        .status-pass {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .timestamp {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .findings {
+            font-size: 0.9em;
+            color: #555;
+            display: block;
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Playwright test Automation Report</h1>
+
+        <div class="timestamp">
+            <strong>Application:</strong> https://app.vwo.com/#/login <br>
+            <strong>Tested on:</strong> 2026-03-23
+        </div>
+
+        <div class="summary-cards">
+            <div class="card">
+                <h3>Total Tests</h3>
+                <p>5</p>
+            </div>
+            <div class="card pass">
+                <h3>Passed</h3>
+                <p>5</p>
+            </div>
+            <div class="card">
+                <h3>Failed</h3>
+                <p style="color: #dc3545;">0</p>
+            </div>
+        </div>
+
+        <h2>Test Cases Execution Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>TC ID</th>
+                    <th>Test Title</th>
+                    <th>Category</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>TC-001</strong></td>
+                    <td>
+                        Verify login failure when using an unregistered dummy email
+                        <span class="findings">Found: Error banner "Your email, password, IP address or location did not
+                            match"</span>
+                    </td>
+                    <td>Negative</td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-002</strong></td>
+                    <td>
+                        Verify login behavior using Arabic characters
+                        <span class="findings">Found: UI handles Arabic encoding; Error banner + 401 Unauthorized API
+                            error</span>
+                    </td>
+                    <td>Negative</td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-003</strong></td>
+                    <td>
+                        Verify login behavior using Chinese characters
+                        <span class="findings">Found: UI handles Chinese encoding; Error banner + 401 Unauthorized
+                            securely</span>
+                    </td>
+                    <td>Negative</td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-004</strong></td>
+                    <td>
+                        Verify login fields are secure against basic SQL injection parameters
+                        <span class="findings">Found: SQL payload treated as string securely; Standard unauthorized
+                            error caught</span>
+                    </td>
+                    <td>Negative</td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-005</strong></td>
+                    <td>
+                        Verify that consecutive invalid login attempts trigger bot-prevention reCAPTCHA
+                        <span class="findings">Found: Google "I'm not a robot" frame dynamically loaded above the Sign
+                            in button</span>
+                    </td>
+                    <td>Negative</td>
+                    <td><span class="status-badge status-pass">PASS</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Snehakudtarkar/LearningPlaywright#readme",
   "devDependencies": {
     "@playwright/test": "^1.58.2"
+  },
+  "dependencies": {
+    "@playwright/mcp": "^0.0.68"
   }
 }
